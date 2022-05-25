@@ -1,0 +1,227 @@
+<!-- <section>
+    <div >
+        <h2 class="title-txt">Wallet</h2>
+    </div>
+    <div>
+        <div nz-row >
+            <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="17" nzXl="17">
+                <div nz-row >
+                    <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="6" nzXl="6">
+        <div class="topcoin-list">
+            <div class="coinname">
+                <img src="../../../../assets/img/svg coins/btc.svg"  width="37"  alt="">
+                <h2>BTC</h2>
+            </div>
+            <div class="coinvalue">
+                <h2>2.23402341</h2>
+            </div>
+        </div>
+        </div>
+        <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="6" nzXl="6">
+            <div class="topcoin-list">
+                <div class="coinname">
+                <img src="../../../../assets/img/svg coins/usdt.svg" width="37" alt="">
+                <h2>USDT</h2>
+                </div>
+                <div class="coinvalue">
+                    <h2>2.23402341</h2>
+                </div>
+            </div>
+            </div>
+            <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="6" nzXl="6">
+                <div class="topcoin-list">
+                    <div class="coinname">
+                    <img src="../../../../assets/img/svg coins/bnb.svg"  width="37"  alt="">
+                    <h2>BNB</h2>
+                    </div>
+                    <div class="coinvalue">
+                        <h2>2.23402341</h2>
+                    </div>
+                </div>
+                </div>
+                <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="6" nzXl="6">
+                    <div class="topcoin-list">
+                        <div class="coinname">
+                        <img src="../../../../assets/img/svg coins/etc.svg"  width="37"  alt="">
+                        <h2>ETC</h2>
+                        </div>
+                        <div class="coinvalue">
+                            <h2>2.23402341</h2>
+                        </div>
+                    </div>
+                    </div>
+        </div>
+        <h2 class="coinlisttitle-txt">Top CoinList</h2>
+        <div nz-row>
+            <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="24">
+                 <div class="table-list">
+                    <nz-table #basicTable [nzData]="listOfData" [nzShowPagination]="false">
+                        <thead>
+                          <tr>
+                            <th>Coin Name</th>
+                            <th>Available</th>
+                            <th>Hold & Earn</th>
+                            <th>Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let data of basicTable.data">
+                            <td><img class="coin-list-name" src="../../../../assets/img/svg coins/btc.svg" alt="">{{ data.coinname }}</td>
+                            <td>{{ data.available }}</td>
+                            <td>{{ data.holdearn }}</td>
+                            <td>{{ data.amount }}</td>
+                          </tr>
+                        </tbody>
+                      </nz-table>
+                 </div>
+
+            </div>
+        </div>
+        </div>
+        <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="7" nzXl="7">
+            <div class="tab-list">
+                <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a Coin" >
+                    <nz-option nzLabel="BTC" nzValue="BTC"></nz-option>
+                    <nz-option nzLabel="USDT" nzValue="USDT"></nz-option>
+                    <nz-option nzLabel="ETH" nzValue="ETH"></nz-option>
+                  </nz-select>
+                <nz-tabset id="Smarttrade_Tabset" [nzAnimated]="false"> 
+                    <nz-tab nzTitle="Deposit">
+                         <div class="qr-txt">
+                        <img src="../../../../assets/img/svg/qr.png" alt=""> 
+                          <p class="id-txt">DdzFFzCqrhsyKjevy4z1RsHusxeWzmYmQxEp3RnPCvgNbwEBZNEBTM2BHEfxXqoBbHsPH3VMvyZjGmDKqfGNXRC4HNMxy5zhcE6wT7a2</p>
+                         </div>
+                            <div>
+                                <ul class="list-content">
+                                  <li>Send only ADA to this deposit address.</li>
+                                  <li>Sending coin or token other than  ADA to this address may result in the loss of your deposit.</li>
+                                </ul>
+                            </div>
+                        </nz-tab>
+                        <nz-tab nzTitle="Withdraw">
+                            <form nz-form>
+                                <nz-form-label class="label-txt" >Recepient Address</nz-form-label>
+                                <nz-form-item>
+                                  <nz-form-control>
+                                    <input class="input-box" nz-input  type="text" >
+                                  </nz-form-control>
+                                </nz-form-item >
+                                <nz-form-label class="label-txt" >Tag</nz-form-label>
+                                <nz-form-item>
+                                  <nz-form-control>
+                                    <input class="input-box" nz-input  type="text" >
+                                  </nz-form-control>
+                                </nz-form-item >
+                                <nz-form-label class="label-txt" >Amount</nz-form-label>
+                                <nz-form-item>
+                                  <nz-form-control>
+                                    <input class="input-box" nz-input  type="text" >
+                                  </nz-form-control>
+                                </nz-form-item >  
+                                <nz-radio-group>
+                                  <label nz-radio-button nzValue="A">25%</label>
+                                  <label nz-radio-button nzValue="B">50%</label>
+                                  <label nz-radio-button nzValue="C">75%</label>
+                                  <label nz-radio-button nzValue="D">100%</label>
+                                </nz-radio-group>
+
+                                <div class="btn-footer">
+                                  <button class="cancel-btn">Cancel</button>
+                                  <button class="send-btn">Send</button>
+                                </div>
+                              </form>
+                        </nz-tab>
+                        <nz-tab nzTitle="Convert">
+                          <form nz-form>
+                            <nz-form-label class="label-txt" >From</nz-form-label>
+                            <nz-form-item>
+                              <nz-form-control>
+                                <input class="input-box" nz-input  type="text" >
+                              </nz-form-control>
+                            </nz-form-item >
+                            <nz-radio-group>
+                              <label nz-radio-button nzValue="A">25%</label>
+                              <label nz-radio-button nzValue="B">50%</label>
+                              <label nz-radio-button nzValue="C">75%</label>
+                              <label nz-radio-button nzValue="D">100%</label>
+                            </nz-radio-group>
+                            <br>
+                            <nz-form-label class="label-txt" >To</nz-form-label>
+                            <nz-form-item>
+                              <nz-form-control>
+                                <input class="input-box" nz-input  type="text" >
+                              </nz-form-control>
+                            </nz-form-item >
+                            <div class="btn-footer">
+                              <button class="cancel-btn">Cancel</button>
+                              <button class="send-btn">Submit</button>
+                            </div>
+                          </form>
+                        </nz-tab>
+                        <nz-tab nzTitle="Transfer">
+                          <form nz-form>
+                            <nz-form-label class="label-txt" >Transfer</nz-form-label>
+                            <nz-form-item>
+                              <nz-form-control>
+                                <input class="input-box" nz-input  type="text" >
+                              </nz-form-control>
+                            </nz-form-item >
+                            <nz-form-label class="label-txt" >Fund</nz-form-label>
+                            <nz-form-item>
+                              <nz-form-control>
+                                <input class="input-box" nz-input  type="text" >
+                              </nz-form-control>
+                            </nz-form-item >
+                            <nz-radio-group>
+                              <label nz-radio-button nzValue="A">25%</label>
+                              <label nz-radio-button nzValue="B">50%</label>
+                              <label nz-radio-button nzValue="C">75%</label>
+                              <label nz-radio-button nzValue="D">100%</label>
+                            </nz-radio-group>
+
+                            <div class="btn-footer">
+                              <button class="cancel-btn">Cancel</button>
+                              <button class="send-btn">Submit</button>
+                            </div>
+                          </form>
+                        </nz-tab>
+
+                     </nz-tabset>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="history-txt">
+    <h2 class="coinlisttitle-txt">Recent Transaction History</h2>
+    <p>View All</p>
+   </div>
+    <div nz-row>
+        <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="24">
+             <div class="Transactiontable-list">
+                <nz-table #listTabledata [nzData]="listTable" [nzShowPagination]="false">
+                    <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>ID</th>
+                        <th>Address</th>
+                        <th>Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let list of listTabledata.data">
+                        <td>{{ list.date }}</td>
+                        <td>{{ list.id }}</td>
+                        <td>{{ list.address }}</td>
+                        <td>{{ list.amount }}</td>
+                      </tr>
+                    </tbody>
+                  </nz-table>
+             </div>
+
+        </div>
+    </div>  
+</section> -->

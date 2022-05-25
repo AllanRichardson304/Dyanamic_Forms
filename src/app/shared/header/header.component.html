@@ -1,0 +1,15 @@
+<div class="header-bg">
+    <div> <img src="../../../../assets/img/logo.svg" width="35" alt="">  </div>
+    <div><h2 class="header-title">Admin</h2></div>
+    <div>
+        <img class="bell-icon" src="../../../../assets/img/bell.svg" width="25" alt="">
+        <nz-avatar class="user-content" [nzSize]="45" nzIcon="user"  nzText="A" nz-dropdown nzTrigger="click" [nzDropdownMenu]="menulist" nzPlacement="bottomRight" ></nz-avatar>
+        <nz-dropdown-menu #menulist="nzDropdownMenu">
+          <ul nz-menu>
+            <li nz-menu-item >SignOut</li>
+          </ul>
+        </nz-dropdown-menu>
+      </div>
+        
+  
+  </div>

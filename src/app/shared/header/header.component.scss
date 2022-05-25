@@ -1,0 +1,25 @@
+.header-bg{
+    background-color:#1A1C1E;
+    height: 65px;
+    padding: 0;
+    position:fixed;
+    z-index: 1000;
+    width: 100%;
+    border-bottom: 1px solid #1A1C1E;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 1%;
+}
+.header-title{
+    font-family: "GoogleSans-Bold";
+    color: #fff;
+    margin-bottom: 0px;
+}
+.bell-icon{
+    margin-right: 25px;
+}
+.user-content{
+    cursor: pointer;
+}
